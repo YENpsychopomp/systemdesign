@@ -84,35 +84,37 @@
 ### 3. 專題甘特圖
  
 ```mermaid
+%%{init: {"theme": "neutral", "gantt": {"barHeight": 26, "barGap": 6, "fontSize": 12, "sectionFontSize": 13, "leftPadding": 80, "topPadding": 44, "gridLineStartPadding": 30}}}%%
 gantt
     title 移動秘書專題甘特圖（2026/10/01 – 12/21）
     dateFormat YYYY-MM-DD
     axisFormat %m/%d
     tickInterval 1week
-    section 規劃與需求
-    A 專案規劃與題目確認、GitHub 建置（蔡逸誠） :crit, a, 2026-10-01, 7d
-    B 需求蒐集與使用者情境訪談（林育伸） :crit, b, 2026-10-08, 7d
-    C 需求分析（Use Case、需求規格書）（顏仕祁） :crit, c, 2026-10-15, 8d
-    section 設計
-    D 系統架構設計與技術選型（蔡逸誠） :crit, d, 2026-10-23, 7d
-    E 資料庫設計（ERD、Schema）（呂孟澤） :e, 2026-10-23, 5d
-    F UI/UX 設計（Wireframe、Prototype）（施誠軒） :f, 2026-10-23, 10d
-    section 開發
-    G ASR 語音辨識模組（串接 iAI ASR）（顏仕祁） :g, 2026-10-30, 14d
-    H 摘要與任務擷取模組（LLM Prompt 設計）（蔡逸誠） :h, 2026-10-30, 14d
-    I 後端 API 與資料庫實作（呂孟澤） :crit, i, 2026-10-30, 14d
-    J 前端網頁實作（施誠軒） :j, 2026-11-02, 14d
-    K LINE 記事本／行事曆整合（林育伸） :crit, k, 2026-11-13, 10d
-    section 整合與測試
-    L 系統整合（蔡逸誠） :crit, l, 2026-11-23, 7d
-    M 系統測試（單元、整合、使用者驗收）（林育伸） :crit, m, 2026-11-30, 9d
-    N 缺失修正與效能優化（全員） :crit, n, 2026-12-09, 5d
-    section 文件與結案
-    O 系統分析與設計文件撰寫（UML、ERD、報告）（全員） :o, 2026-10-30, 35d
-    P 期末簡報與成果展示準備（全員） :crit, p, 2026-12-14, 3d
+    section 蔡逸誠
+    A 規劃 :crit, a, 2026-10-01, 7d
+    D 架構 :crit, d, 2026-10-23, 7d
+    H 摘要 :h, 2026-10-30, 14d
+    L 整合 :crit, l, 2026-11-23, 7d
+    section 顏仕祁
+    C 分析 :crit, c, 2026-10-15, 8d
+    G ASR :g, 2026-10-30, 14d
+    section 林育伸
+    B 訪談 :crit, b, 2026-10-08, 7d
+    K LINE :crit, k, 2026-11-13, 10d
+    M 測試 :crit, m, 2026-11-30, 9d
+    section 呂孟澤
+    E DB :e, 2026-10-23, 5d
+    I 後端API :crit, i, 2026-10-30, 14d
+    section 施誠軒
+    F UI/UX :f, 2026-10-23, 10d
+    J 前端 :j, 2026-11-02, 14d
+    section 全員
+    O 分析與設計文件 :o, 2026-10-30, 35d
+    N 修正 :crit, n, 2026-12-09, 5d
+    P :crit, p, 2026-12-14, 3d
     section 緩衝
-    機動緩衝期 :buf, 2026-12-17, 5d
-    專案結束 :milestone, fin, 2026-12-21, 0d
+    機動緩衝 :buf, 2026-12-17, 5d
+    結束 12/21 :milestone, fin, 2026-12-21, 0d
 ```
  
 > 紅色長條為關鍵路徑任務。
